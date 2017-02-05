@@ -11,8 +11,15 @@
   <body>
     <!--<p class="notice"><%= notice %></p>-->
     <!--<p class="alert"><%= alert %></p>-->
-    
     <%= render "layouts/header" %>
+
+    <% flash.each do |type, message| %>
+      <div class="alert alert-info fade-in">
+        <button class="close" data-dismiss="alert">X</button>
+        <%= message %>
+      </div>
+    <% end %>
+
     <div class="container">
       <%= yield %>
 
