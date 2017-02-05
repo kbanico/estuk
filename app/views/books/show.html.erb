@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-    
+
     <div class="col-md-6">
-      <%= image_tag "book.jpg", class: "img-responsive" %>
+      <%= image_tag @book.image.url(:original), class: "img-responsive" %>
     </div>
     
     <div class="col-md-6">
@@ -15,3 +15,4 @@
 </div>
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
